@@ -1,0 +1,352 @@
+.icon-color {
+    color: #ffffff;
+}
+
+/*User Profile*/
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 10000000000000;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+        .sidenav a {
+            font-size: 18px;
+        }
+}
+
+a {
+    color: #0488ae;
+    text-decoration: none;
+}
+
+.user-details {
+    position: relative;
+    padding: 0;
+}
+
+    .user-details .user-image {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        text-align: center;
+    }
+
+.user-image img {
+    clear: both;
+    margin: auto;
+    position: relative;
+}
+
+.user-details .user-info-block {
+    width: 100%;
+    position: absolute;
+    top: 72%;
+    /*background: rgb(255, 255, 255);
+    */
+    z-index: 0;
+    padding-top: 35px;
+    color: white;
+}
+
+.user-info-block .user-heading {
+    width: 100%;
+    text-align: center;
+    margin: 20px 0 0;
+}
+
+.user-info-block .navigation {
+    float: left;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-bottom: 1px solid #17800c;
+    border-top: 1px solid #17800c;
+}
+
+.navigation li {
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+    .navigation li a {
+        padding: 20px 30px;
+        float: left;
+    }
+
+    .navigation li.active a {
+        background: #428BCA;
+        color: #fff;
+    }
+
+.user-info-block .user-body {
+    float: left;
+    padding: 5%;
+    width: 90%;
+}
+
+.user-body .tab-content > div {
+    float: left;
+    width: 100%;
+}
+
+.user-body .tab-content h4 {
+    width: 100%;
+    margin: 10px 0;
+    color: #333;
+}
+
+
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
+    display: block;
+}
+
+audio, canvas, progress, video {
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+    audio:not([controls]) {
+        display: none;
+        height: 0;
+    }
+
+a {
+    background-color: transparent;
+    text-decoration: none;
+}
+
+    a:active, a:hover {
+        outline: 0;
+    }
+
+h1, h2, h3, h4, h5, h6, p, ul, ol {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/***********************  TOP Bar ********************/
+.sidebar {
+    position: absolute;
+    width: 55px;
+    height: 1500px;
+    background-color: #000;
+    transition: all 0.5s ease-in-out;
+}
+
+.bg-defoult {
+    background-color: #222;
+}
+
+.sidebar ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.sidebar li a, .sidebar li a.collapsed.active {
+    display: block;
+    padding: 8px 12px;
+    color: #fff;
+    border-left: 0px solid #dedede;
+    text-decoration: none;
+}
+
+    .sidebar li a.active {
+        background-color: #000;
+        border-left: 5px solid #dedede;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .sidebar li a:hover {
+        background-color: #000 !important;
+    }
+
+    .sidebar li a i {
+        padding-right: 5px;
+    }
+
+.sidebar ul li .sub-menu li a {
+    position: relative;
+}
+
+    .sidebar ul li .sub-menu li a:before {
+        font-family: FontAwesome;
+        content: "\f105";
+        display: inline-block;
+        padding-left: 0px;
+        padding-right: 10px;
+        vertical-align: middle;
+    }
+
+    .sidebar ul li .sub-menu li a:hover:after {
+        content: "";
+        position: absolute;
+        left: -5px;
+        top: 0;
+        width: 5px;
+        background-color: #111;
+        height: 100%;
+    }
+
+    .sidebar ul li .sub-menu li a:hover {
+        background-color: #222;
+        padding-left: 20px;
+        transition: all 0.5s ease-in-out;
+    }
+
+.sub-menu {
+    border-left: 5px solid #dedede;
+}
+
+.sidebar li a .nav-label, .sidebar li a .nav-label + span {
+    transition: all 0.5s ease-in-out;
+}
+
+
+.sidebar.fliph li a .nav-label, .sidebar.fliph li a .nav-label + span {
+    display: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.sidebar.fliph {
+    width: 52px;
+    transition: all 0.5s ease-in-out;
+}
+
+    .sidebar.fliph li {
+        position: relative;
+    }
+
+    .sidebar.fliph .sub-menu {
+        position: absolute;
+        left: 49px;
+        top: 0;
+        background-color: #222;
+        width: 150px;
+        z-index: 100;
+    }
+
+
+.bg-faded {
+    background-color: #17800c;
+}
+
+
+.navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.open, .navbar-light .navbar-nav .open > .nav-link {
+    color: #ffffff;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #ffffff;
+}
+
+.navbar-light .navbar-brand, .navbar-light .navbar-toggler {
+    color: #ffffff;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: #ffffff;
+}
+
+.container-fluid {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.contan-body {
+    padding: 2% 5%;
+}
+
+@media (max-width: 650px) {
+
+    .contan-body {
+        padding: 2% 12%;
+    }
+}
+
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 110%;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}

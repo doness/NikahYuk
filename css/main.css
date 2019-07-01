@@ -1,0 +1,17 @@
+/* required fields marked in red */
+.red-asterisk {
+    color: #ff0000;
+    font-weight: 500;
+}
+label.error {
+    color: rgba(255, 0, 0, 0.69);
+}
+.border-secondary {
+    border-color: rgba(108, 117, 125, 0.50) !important;
+}
+.container h2.text-center {
+    color: #ffffff;
+}
+.svg-inline--fa {
+    padding-top: 2px !important;
+}
