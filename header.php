@@ -22,17 +22,17 @@
 				  <a class="dropdown-item" href="#">Jewelry</a>
 				</div>
 			  </li>
-			  <li class="nav-item">
+			  <!--li class="nav-item">
 				<a class="nav-link" href="adat.php">Adat Pernikahan</a>
-			  </li>
+			  </li-->
 			  <li class="nav-item dropdown">
 				<a class="nav-link dropdown-toggle" href="#"id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					Wedding Details
 				</a>
 				<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-				  <a class="dropdown-item" href="footwear.php">Decoration & Lightning</a>
-				  <a class="dropdown-item" href="#">Souvenir</a>
-				  <a class="dropdown-item" href="#">Kartu Undangan</a>
+				  <a class="dropdown-item" href="decoration.php">Decoration & Lightning</a>
+				  <a class="dropdown-item" href="souvenir.php">Souvenir</a>
+				  <a class="dropdown-item" href="undangan.php">Kartu Undangan</a>
 				</div>
 			  </li>
 			</ul>

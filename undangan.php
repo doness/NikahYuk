@@ -11,7 +11,7 @@ $user=new User();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Footwear - NikahYuk</title>
+    <title>Undangan - NikahYuk</title>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
@@ -27,7 +27,7 @@ $user=new User();
 
     <section class="jumbotron text-center">
         <div class="container pt-lg-5 pl-5 px-5">
-            <h1 class="display-3">Paket Footwear</h1>
+            <h1 class="display-3">Paket Undangan</h1>
             <p class="lead text-muted">Tersedia Beberapa Paket yang siap anda pilih dalam sekali pemesanan.</p>
             <p>
                 <a href="#booknow" class="btn btn-success my-2">Book now<i class="fas fa-angle-double-right ml-1"></i></a>
@@ -39,13 +39,13 @@ $user=new User();
         <div class="container">
 			<?php
         
-				$sql="SELECT * FROM paket_category WHERE paket_nm LIKE '%Foot%'";
+				$sql="SELECT * FROM paket_category WHERE paket_nm LIKE '%Undangan%'";
 				$result = mysqli_query($user->db, $sql);
 				if($result)
 				{
 					if(mysqli_num_rows($result) > 0)
 					{
-					//********************************************** Show Room Category***********************
+					//********************************************** Show Decoration Category***********************
 						while($row = mysqli_fetch_array($result))
 						{
 							echo "  <div class='row'>
@@ -58,8 +58,54 @@ $user=new User();
 													<h5 class='my-0 font-weight-normal'>".$row['paket_nm']."</h5>
 												</div>
 												<div class='card-body'>
-													<p>".$row['facility']." </p>
-													</p>
+													<p>".$row['facility']."</p>
+													<div class='d-flex justify-content-between align-items-center'>
+														<div class='btn-group'>
+															<a href='./booknow.php?paketname=".$row['paket_nm']."'><button class='btn btn-sm btn-outline-success'>Book </button></a>
+														</div>
+														<small class='text-muted'><b>Price: Rp ".$row['price']."</b></small>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class='col-md-1'>
+										</div>
+									</div>"; //echo end
+						}	  
+					}
+					else
+					{
+						
+					}
+				}
+				else
+				{
+					echo "Cannot connect to server".$result;
+				}
+			?>
+			
+			<?php
+        
+				$sql="SELECT * FROM paket_category WHERE paket_nm LIKE '%Kartu%'";
+				$result = mysqli_query($user->db, $sql);
+				if($result)
+				{
+					if(mysqli_num_rows($result) > 0)
+					{
+					//********************************************** Show Dekorasi Category***********************
+						while($row = mysqli_fetch_array($result))
+						{
+							echo "  <div class='row'>
+										<div class='col-md-1'>
+										</div>
+										<div class='col-md-10'>
+											<div class='card mb-4 box-shadow'>
+												<a name='booknow'></a>
+												<div class='card-header'>
+													<h5 class='my-0 font-weight-normal'>".$row['paket_nm']."</h5>
+												</div>
+												<div class='card-body'>
+													<p>".$row['facility']."</p>
 													<div class='d-flex justify-content-between align-items-center'>
 														<div class='btn-group'>
 															<a href='./booknow.php?paketname=".$row['paket_nm']."'><button class='btn btn-sm btn-outline-success'>Book </button></a>
